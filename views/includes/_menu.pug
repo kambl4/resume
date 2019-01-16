@@ -1,0 +1,26 @@
+//- Desktop menu
+.menu
+  .container
+    .row
+      .menu__wrapper.d-none.d-lg-block.col-md-12
+        nav
+          ul
+            li: a(href="#hello") Привет
+            li: a(href="#resume") Резюме
+            li: a(href="#portfolio") Портфолио
+            li: a(href="#contact") Связь
+      .menu_wrapper.col-md-12.d-lg-none
+        button.menu__mobile-button(type="button")
+          span: i.fa.fa-bars(area-hidden="true")
+
+//- Mobile menu
+.mobile-menu.d-lg-none
+  .container
+    .mobile-menu__close
+      span: i.mdi.mdi-close(area-hidden="true")
+    nav.mobile-menu__wrapper
+      ul
+        li: a(href="#hello") Привет
+        li: a(href="#hello") Резюме
+        li: a(href="#hello") Портфолио
+        li: a(href="#hello") Связь

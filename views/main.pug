@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+
+  head
+
+    block title
+      title Тарасенко Павел Сергеевич
+
+    include includes/_head.pug
+
+  body
+
+    // DOM loader icon
+    #before-load
+      i.fa.fa-brain
+
+    // Menu
+    include includes/_menu.pug
+
+    // Header
+    include includes/_header.pug
+
+    block content
+
+      // Sections
+      include sections/hello.pug
+      include sections/resume.pug
+      include sections/portfolio.pug
+      include sections/contact.pug
+
+    include includes/_javascript.pug
+
+    block specific-js
+
+    script.
+      document.addEventListener("DOMContentLoaded", function(event) {
+        $('#before-load').find('i').fadeOut().end().delay(400).fadeOut('slow');
+      });

@@ -1,0 +1,30 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Tarasenko_PS resume page",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kambl4/resume.git"
+  },
+  "author": "Tarasenko_PS <goo.kambl4@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kambl4/resume/issues"
+  },
+  "homepage": "https://github.com/kambl4/resume#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "helmet": "^3.15.0",
+    "nodemon": "^1.18.9"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8,
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": "off",
+        "no-empty": "off",
+        "no-unused-vars": "off",
+        "no-undef": "off",
+        "indent": "off"
+    }
+}

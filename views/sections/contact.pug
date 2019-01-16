@@ -1,0 +1,39 @@
+.background(style="background-image: url(/img/img_bg_main.jpg)")
+  .container.section#contact
+    .row
+      .col-md-12
+        p.section__title#contacts_header Связь_
+    .row.contacts
+      .col-md-5.col-lg-4
+        .contacts__list
+          dl.contact-list
+            dt Телефон:
+            dd: a(href="tel:89117398113") 8 (911) 739-81-13
+            dt Skype:
+            dd: a(href="skype:kambl4.spb") kambl4.spb
+            dt Email:
+            dd: a(href="mailto:goo.kambl4@gmail.com") goo.kambl4@gmail.com
+        .contacts__social
+          ul
+            li: a(href="") ВКонтакте
+            li: a(href="") GitHub
+      .col-md-7.col-lg-5
+        .contacts__form
+          p.contacts__form-title Или напишите мне с помощью формы ниже
+          form.js-form
+            .form-group
+              input.form-field.js-field-name(type="text" placeholder="Ваше имя" required)
+              span.form-validation
+              span.form-invalid-icon: i.mdi.mdi-close(area-hidden="true")
+            .form-group
+              input.form-field.js-field-email(type="email" placeholder="Ваш email" required)
+              span.form-validation
+              span.form-invalid-icon: i.mdi.mdi-close(area-hidden="true")
+            .form-group
+              textarea.form-field.js-field-message(placeholder="Ваше сообщение" required)
+              span.form-validation
+              span.form-invalid-icon: i.mdi.mdi-close(area-hidden="true")
+            button.site-btn.site-btn--form(type="submit" value="Send") Отправить
+        .footer
+          p &lt;/&gt; with ♡ by Tarasenko_PS
+            
