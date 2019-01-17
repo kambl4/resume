@@ -8,13 +8,15 @@ section.container.section#portfolio
           | Код в приватных репках на Github, доступ по запросу
         
   .portfolio-cards
-    .row.project-card(data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="beplus")
+    .row.project-card(data-toggle="modal" data-target="#beplus-modal" data-portfolio-tag="beplus")
       .col-md-6.col-lg-5.project-card__img
         img(src="/img/beplus.png" alt="beplus.life")
       .col-md-6.col-lg-7.project-card__info
         h3.project-card__title Социальная сеть beplus.life
         p.project-card__description
-          | Описание
+          strong BePlus.life — это социальная сеть для людей с диагнозом ВИЧ+<br>
+          | Многие люди, которые впервые узнают о своем ВИЧ-положительном статусе теряются и не понимают, как жить дальше. Такая реакция понятна, однако в этот момент важно понимать: с диагнозом «ВИЧ-инфекция» можно жить долго и полноценно, а также родить здорового ребенка.<br><br>
+          | Моя цель — помочь людям осознать что они не одиноки, помочь найти поддержку, друзей и, возможно, даже вторую половину. :) Это же прекрасно, вы согласны?
         p.project-card__stack Stack:
         ul.tags
           li html5
@@ -28,13 +30,14 @@ section.container.section#portfolio
           li webpack
         a.project-card__link(target="_blank" href="https://beplus.life") https://beplus.life
 
-    .row.project-card(data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="master")
+    .row.project-card(data-toggle="modal" data-target="#master-modal" data-portfolio-tag="master")
       .col-md-6.col-lg-5.project-card__img
         img(src="/img/master.png" alt="Master")
       .col-md-6.col-lg-7.project-card__info
-        h3.project-card__title CRM-система с возможностью аренды сейфовых ячеек MASTER
+        h3.project-card__title CRM-система MASTER
         p.project-card__description
-          | Описание
+          | Центр сделок с недвижимостью предоставляет услугу проведения взаиморасчетов через сейфовые ячейки с магнитным замком и доступом по карте с пин-кодом или отпечатку пальца<br><br>
+          | Данная CRM-система позволяет автоматизировать процесс создания договора аренды сейфовой ячейки, а так же дает возможность управления сейфовыми ячейками (аренда, сохранение данных арендаторов, выдача и пр.)
         p.project-card__stack Stack:
         ul.tags
           li html5
@@ -48,13 +51,13 @@ section.container.section#portfolio
           li socket.io
           li mongodb
 
-    .row.project-card(data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="navius-site")
+    .row.project-card(data-toggle="modal" data-target="#navius-site-modal" data-portfolio-tag="navius-site")
       .col-md-6.col-lg-5.project-card__img
         img(src="/img/navius-site.png" alt="Navius site")
       .col-md-6.col-lg-7.project-card__info
         h3.project-card__title Сайт Центра сделок с недвижимостью
         p.project-card__description
-          | Описание
+          | Собственно сайт компании, можете посмотреть его перейдя по ссылке :)
         p.project-card__stack Stack:
         ul.tags
           li html5
@@ -68,13 +71,19 @@ section.container.section#portfolio
           li mongodb
         a.project-card__link(target="_blank" href="http://centr-sdelok.ru") http://centr-sdelok.ru
 
-    .row.project-card(data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="navius-admin")
+    .row.project-card(data-toggle="modal" data-target="#navius-admin-modal" data-portfolio-tag="navius-admin")
       .col-md-6.col-lg-5.project-card__img
-        img(src="/img/navius-admin.png" alt="Navius admin")
+        img(src="/img/navius-admin2.png" alt="Navius admin")
       .col-md-6.col-lg-7.project-card__info
         h3.project-card__title Админка к сайту Центра сделок с недвижимостью
         p.project-card__description
-          | Описание
+          | Административная панель к сайту<br><br>
+          | Функционал:<br>
+          | - Изменение общей информации (телефон, адрес, почтовые адреса и т.п.)<br>
+          | - CRUD статей блога<br>
+          | - CRUD проходящих семинаров<br>
+          | - CRUD акций<br>
+          
         p.project-card__stack Stack:
         ul.tags
           li html5
@@ -88,22 +97,167 @@ section.container.section#portfolio
           li mongodb
         a.project-card__link(target="_blank" href="http://centr-sdelok.ru") http://centr-sdelok.ru
 
-    .row.project-card(data-toggle="modal" data-target="#portfolioModal" data-portfolio-tag="happy-electron")
+    .row.project-card(data-toggle="modal" data-target="#happy-electron-modal" data-portfolio-tag="happy-electron")
       .col-md-6.col-lg-5.project-card__img
-        img(src="/img/happy-electron.png" alt="Happy Electron")
+        img(src="/img/happy-electron2.png" alt="Happy Electron")
       .col-md-6.col-lg-7.project-card__info
         h3.project-card__title Frontend для взаимодействия с базой элементов питания
         p.project-card__description
-          | Описание
+          | "Помощь другу"<br>
+          | В ТЗ было нарисованно расположение элементов и написано "Нужен поиск по элементам и возможность выбора нескольких. При выборе нескольких должны появляться данные в графиках по каждому элементу"<br>
+          | В общем все было сделано, все довольны :)<br>
         p.project-card__stack Stack:
         ul.tags
-          li html5
-          li css3
           li bootstrap3
-          li javascript
           li jquery
           li charts.js
           li vue.js
           li node.js
           li pug
-    
+
+//- Modals
+
+.modal.fade.portfolio-modal#beplus-modal(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog.modal-lg(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body.col-md-11.col-lg-9.ml-auto.mr-auto
+        p.portfolio-modal__title Социальная сеть BePlus.life
+        //- img.portfolio-modal__img(src="/img/beplus.png")
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/-Iy27uLYxN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        br
+        br
+        p.portfolio-modal__description
+          | На данный момент реализован следующий функционал:<br>
+          | - Профиль пользователя с фото и подробной анкетой, а также личной стеной.<br>
+          | - Лайки, комментарии, прикрепление фото, музыки и пр.<br>
+          | - Фильтр участников по городам, возрасту и полу.<br>
+          | - Личные переписки (чаты).<br>
+          | - Общий чат для всех участников.<br>
+          | - Раздел с новой и полезной информацией о ВИЧ.<br>
+          | - Музыкальные записи. Возможность делиться своим настроением в аудио формате.<br>
+          | - Возможность находить и добавлять друзей.<br>
+          | - Система почтовых уведомлений.<br>
+          | - Мобильная адаптивность.<br>
+          | - Баг-трекер (отдельный форум для регистрации ошибок и предложений).<br><br>
+          | Я продолжаю разработку. Посмотреть историю изменений (changelog) можно в баг-трекере
+        .portfolio-modal__link
+          a(target="_blank" href="https://beplus.life") https://beplus.life
+        .portfolio-modal__stack
+          p.portfolio-modal__stack-title Stack:
+          ul.tags
+            li html5
+            li css3
+            li javascript
+            li vue.js
+            li node.js
+            li pug
+            li socket.io
+            li mongodb
+            li webpack
+
+.modal.fade.portfolio-modal#master-modal(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog.modal-lg(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body.col-md-11.col-lg-9.ml-auto.mr-auto
+        p.portfolio-modal__title CRM система MASTER
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/-Iy27uLYxN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        br
+        br
+        
+        .portfolio-modal__stack
+          p.portfolio-modal__stack-title Stack:
+          ul.tags
+            li html5
+            li css3
+            li bootstrap3
+            li javascript
+            li jquery
+            li vue.js
+            li node.js
+            li pug
+            li socket.io
+            li mongodb
+
+.modal.fade.portfolio-modal#navius-site-modal(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog.modal-lg(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body.col-md-11.col-lg-9.ml-auto.mr-auto
+        p.portfolio-modal__title Сайт Центра сделок с недвижимостью
+        img.portfolio-modal__img(src="/img/navius-site.png")
+        p.portfolio-modal__description
+          | Собственно сайт компании, можете посмотреть его перейдя по ссылке :)
+        .portfolio-modal__link
+          a(target="_blank" href="http://centr-sdelok.ru") http://centr-sdelok.ru
+        .portfolio-modal__stack
+          p.portfolio-modal__stack-title Stack:
+          ul.tags
+            li html5
+            li css3
+            li bootstrap3
+            li javascript
+            li jquery
+            li vue.js
+            li node.js
+            li pug
+            li mongodb
+
+.modal.fade.portfolio-modal#navius-admin-modal(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog.modal-lg(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body.col-md-11.col-lg-9.ml-auto.mr-auto
+        p.portfolio-modal__title Админка к сайту Центра сделок с недвижимостью
+        img.portfolio-modal__img(src="/img/navius-admin.png")
+        p.portfolio-modal__description
+          | Функционал:<br>
+          | - Изменение общей информации (телефон, адрес, почтовые адреса и т.п.)<br>
+          | - CRUD статей блога<br>
+          | - CRUD проходящих семинаров<br>
+          | - CRUD акций
+        .portfolio-modal__stack
+          p.portfolio-modal__stack-title Stack:
+          ul.tags
+            li html5
+            li css3
+            li bootstrap3
+            li javascript
+            li jquery
+            li vue.js
+            li node.js
+            li pug
+            li mongodb
+
+.modal.fade.portfolio-modal#happy-electron-modal(tabindex="-1" role="dialog" aria-hidden="true")
+  .modal-dialog.modal-lg(role="document")
+    .modal-content
+      .modal-header
+        button.close(type="button" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      .modal-body.col-md-11.col-lg-9.ml-auto.mr-auto
+        p.portfolio-modal__title Frontend для взаимодействия с базой элементов питания
+        iframe(width="560" height="315" src="https://www.youtube.com/embed/-Iy27uLYxN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        br
+        br
+        p.portfolio-modal__description
+          | Взялся написать, только потому что хотел поработать с Charts.js&nbsp;
+          i.far.fa-smile
+        .portfolio-modal__stack
+          p.portfolio-modal__stack-title Stack:
+          ul.tags
+            li bootstrap3
+            li jquery
+            li charts.js
+            li vue.js
+            li node.js
+            li pug
