@@ -49,7 +49,7 @@ const sendMail = (to, subject, html) => {
 // -----------------------------------------------------------
 app.use(helmet());
 app.use(morgan('dev', 
-  // { skip: (req, res) => { return res.statusCode < 400; }}
+  { skip: (req, res) => { return res.statusCode < 400; }}
 ));  
 app.use(bodyParser.json({ limit: '15mb' }));
 app.use(bodyParser.urlencoded({ limit: '15mb', extended: true }));

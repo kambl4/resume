@@ -24,6 +24,18 @@ form.addEventListener('submit', e => {
   submitForm(e, formName);
 });
 
+let showSnack = type => {
+  let snackSuccess = $("#snackbar-success");
+  let snackError = $("#snackbar-error");
+  if (type === 'success') {
+    snackSuccess.addClass('show');
+    setTimeout(function(){ snackSuccess.removeClass('show'); }, 3000);
+  } else {
+    snackError.addClass('show');
+    setTimeout(function(){ snackError.removeClass('show'); }, 3000);
+  }
+};
+
 let submitForm = (e, formName) => {
   e.preventDefault();
   let name = $(formName + ' .js-field-name').val();
@@ -37,6 +49,8 @@ let submitForm = (e, formName) => {
     data,
     success () {
       console.log('success');
+      showSnack();
+      form.reset();
     },
     error () {
       console.log('error');
