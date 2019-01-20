@@ -48,12 +48,11 @@ let submitForm = (e, formName) => {
     url: 'http://localhost:3002/api/send-mail',
     data,
     success () {
-      console.log('success');
-      showSnack();
+      showSnack('success');
       form.reset();
     },
     error () {
-      console.log('error');
+      showSnack('error');
     }
   });
 };
