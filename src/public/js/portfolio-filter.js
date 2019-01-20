@@ -1,30 +1,25 @@
 'use strict';
 
 //Filter project cards
-var previousClickedMenuLink = undefined;
-$('.portfolio-menu').on('click', 'a', function(event){
-    event.preventDefault();
+let previousClickedMenuLink = undefined;
+$('.portfolio-menu').on('click', 'a', event => {
+  event.preventDefault();
 
-    if (previousClickedMenuLink) {
-        previousClickedMenuLink.removeClass('portfolio-menu__link--active');
-    }
-    var link = $(event.target);
-    link.addClass('portfolio-menu__link--active');
-    previousClickedMenuLink = link;
+  if (previousClickedMenuLink) {
+    previousClickedMenuLink.removeClass('portfolio-menu__link--active');
+  }
+  let link = $(event.target);
+  link.addClass('portfolio-menu__link--active');
+  previousClickedMenuLink = link;
 
-    var targetTag = $(event.target).data('portfolio-target-tag');
-    var portfolioItems = $('.portfolio-cards').children();
+  let targetTag = $(event.target).data('portfolio-target-tag');
+  let portfolioItems = $('.portfolio-cards').children();
 
-    if (targetTag === 'all') {
-        portfolioItems.fadeIn({duration: 500});
-    } else {
-        portfolioItems.hide();
-    }
+  if (targetTag === 'all') portfolioItems.fadeIn({duration: 500});
+  else portfolioItems.hide();
 
-    portfolioItems.each(function(index, value){
-        var item = $(value);
-        if (item.data('portfolio-tag') === targetTag) {
-            item.fadeIn({duration: 500});
-        }
-    });
+  portfolioItems.each((index, value) => {
+    let item = $(value);
+    if (item.data('portfolio-tag') === targetTag) item.fadeIn({duration: 500});
+  });
 });
