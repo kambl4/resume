@@ -67,7 +67,7 @@ app.post('/api/send-mail', (req, res) => {
     <p>Message: ${req.body.message}</p>
   `;
 
-  sendMail('goo.kambl4@gmail.com', 'Mail from tarasenko.website', html);
+  sendMail('goo.kambl4@gmail.com', `from ${req.body.name}`, html);
   res.status(200).json({ success: true });
 });
 
