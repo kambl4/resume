@@ -75,3 +75,10 @@
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
 }
+
+.video-parent {
+  height: 100%;
+}
+.project-card__info {
+  cursor: default;
+}
