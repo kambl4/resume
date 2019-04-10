@@ -45,7 +45,7 @@ let submitForm = (e, formName) => {
 
   $.ajax({
     type: "POST",
-    url: 'http://localhost:3002/api/send-mail',
+    url: '/api/send-mail',
     data,
     success () {
       showSnack('success');
