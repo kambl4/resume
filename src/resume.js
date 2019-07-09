@@ -4,26 +4,26 @@ require('dotenv').config(); // process.env variables in root/.env
 // Variables
 // -----------------------------------------------------------
 const port = process.env.PORT || 3002
-      ,express = require('express')
-      ,app = express()
+  ,express = require('express')
+  ,app = express()
 
-      // Logging
-      ,morgan = require('morgan')
-      ,bodyParser = require('body-parser')
-      ,cors = require('cors')
+  // Logging
+  ,morgan = require('morgan')
+  ,bodyParser = require('body-parser')
+  ,cors = require('cors')
 
-      // Mail
-      ,nodemailer = require('nodemailer')
-      ,transporter = nodemailer.createTransport({
-        service: 'Yandex',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASSWORD
-          }
-      })
+  // Mail
+  ,nodemailer = require('nodemailer')
+  ,transporter = nodemailer.createTransport({
+    service: 'Yandex',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD
+      }
+  })
 
-      // Security
-      ,helmet = require('helmet');
+  // Security
+  ,helmet = require('helmet');
 
 //--------------------------------------------------------------
 // Functions
@@ -82,7 +82,7 @@ app.get('/', (req, res) => {
 // Other routes
 // -----------------------------------------------------------
 app.use("*", (req,res) => {
-  res.status(404).render('404');
+  res.render('404');
 });
 
 // -----------------------------------------------------------
